@@ -1,0 +1,10 @@
+# 보안 응답 헤더 (Netlify / Cloudflare Pages 형식).
+# 정적 파일이므로 dist/_headers 로 복사되어 지원 호스트에서 적용된다.
+# CSP는 빌드 시 index.html <meta>로도 주입되므로(모든 호스트 이식), 여기서는
+# meta로 표현 불가능한 헤더 위주로 둔다.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), usb=(), payment=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin

@@ -1,0 +1,28 @@
+{
+  "name": "golftrack",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "골프 라운딩 스코어 기록 오프라인 PWA",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "idb-keyval": "^6.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/sql.js": "^1.4.9",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.6.2",
+    "vite": "^7.3.6",
+    "vite-plugin-pwa": "^1.3.0"
+  }
+}
