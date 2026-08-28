@@ -34,7 +34,10 @@ function cspMeta(): Plugin {
 }
 
 // GolfTrack — 완전 오프라인 PWA. 서비스워커가 앱 셸과 sql.js WASM까지 프리캐시한다.
+// GitHub Pages 프로젝트 사이트는 /<repo>/ 서브경로로 서빙되므로 그 빌드에서만 base를 바꾼다.
+// (dev 서버와 일반 빌드는 루트 '/' 유지 → 로컬/다른 호스트 배포에 영향 없음)
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/golftrack/' : '/',
   plugins: [
     cspMeta(),
     react(),
